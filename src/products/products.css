@@ -1,0 +1,205 @@
+#myTab {
+    margin-bottom: 60px;
+}
+
+.none {
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    --color: #d8d4d4;
+}
+
+.nav-tabs .nav-item .nav-link {
+    font-weight: 400;
+    color: var(--complementary-color);
+}
+.nav-tabs .nav-item .nav-link.active {
+    color: var(--secondary-color);
+    background-color: var(--color);
+    border-color: var(--color);
+}
+
+ul.taste-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    column-gap: 15px;
+    row-gap: 40px;
+}
+ul.complement-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+}
+ul.pack-container {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+input[type="radio"] {
+    appearance: none;
+}
+input[type="radio"]:checked + label:is(.chocolate, .vainilla, .mango, .frutilla, .frambuesa, .limon, .pepitas, .nueces, .gomitas, .nothing, .vaso, .cono){
+    border: 2px solid rgb(81, 76, 76);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+}
+main section label {
+    position: relative;
+    display: flex;
+    width: 160px;
+    height: 200px;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: end;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+label.chocolate {
+    background-color:#e5ab73;
+}
+label.vainilla {
+    background-color:papayawhip;
+}
+label.mango {
+    background-color:palegoldenrod;
+}
+label.frambuesa {
+    background-color: #e29eff;
+}
+label.limon {
+    background-color:palegreen;
+}
+label.frutilla {
+    background-color:#f9adc6;
+}
+label.pepitas {
+    background-color: #f9d0bd;
+}
+label.nueces {
+    background-color: bisque;
+}
+label.gomitas {
+    background-color: darkseagreen;
+}
+label.nothing {
+    justify-content: center;
+}
+label.vaso {
+    background-color: mintcream;
+}
+label.cono {
+    background-color: beige;
+}
+main section label img {
+    position: absolute;
+}
+label:is(.vainilla, .mango, .frutilla, .frambuesa, .limon) img{
+    width: 190px;
+    height: 170px;
+    top: -40px;
+}
+label.chocolate img{
+    width: 140px;
+    height: 180px;
+    top: -60px;
+}
+label.vainilla img{
+    width: 160px;
+    height: 160px;
+}
+label:is(.pepitas, .gomitas, .nueces) img {
+    width: 150px;
+    height: 120px;
+    top: 10px;
+}
+label.pepitas img {
+    height: 150px;
+    top: 0px;
+}
+label:is(.vaso, .cono) img {
+    width: 120px;
+    height: 120px;
+    top: 5px;
+}
+label.cono img {
+    height: 130px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+main section label span {
+    display: block;
+    width: 100%;
+    height: 30px;
+    margin-block-end: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.submit-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-container input {
+    appearance: none;
+    width: 100px;
+    height: 80px;
+    font-size: 30px;
+    color: var(--main-color);
+    background-color: var(--second-color);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+    ul.taste-container {
+        grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    }
+    main section label {
+        width: 140px;
+        height: 180px;
+    }
+    label:is(.vainilla, .mango, .frutilla, .frambuesa, .limon) img{
+        width: 170px;
+        height: 150px;
+    }
+    label.chocolate img{
+        width: 120px;
+        height: 140px;
+    }
+    label.vainilla img{
+        width: 140px;
+        height: 140px;
+    }
+    label:is(.pepitas, .gomitas, .nueces) img {
+        width: 130px;
+        height: 100px;
+    }
+    label.pepitas img {
+        height: 130px;
+    }
+    label:is(.vaso, .cono) img {
+        width: 100px;
+        height: 100px;
+        top: 5px;
+    }
+    label.cono img {
+        height: 110px;
+        rotate: 45deg;
+    }
+}
